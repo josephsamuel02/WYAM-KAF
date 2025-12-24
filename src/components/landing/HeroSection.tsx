@@ -80,7 +80,7 @@ const HeroSection: React.FC = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 1, delay: 0.15 }}
-          className="relative w-full max-w-md self-stretch"
+          className="relative w-full max-w-md self-stretch mt-6 lg:mt-10"
         >
           <div className="absolute -left-6 top-4 hidden w-28 rounded-2xl border border-white/30 bg-white/15 p-3 text-white backdrop-blur lg:block lg:z-20">
             <p className="text-[10px] uppercase tracking-[0.3em] text-amber-200">Next DTS</p>
