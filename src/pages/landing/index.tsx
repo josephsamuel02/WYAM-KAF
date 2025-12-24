@@ -1,5 +1,5 @@
 import React from "react";
-import HeroSection from "../../components/HeroSection";
+import HeroSection from "../../components/landing/HeroSection";
 import MissionSection from "../../components/landing/MissionSection";
 import ProgramsSection from "../../components/landing/ProgramsSection";
 import StoriesSection from "../../components/landing/StoriesSection";
