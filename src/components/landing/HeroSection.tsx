@@ -3,25 +3,25 @@ import { motion } from "framer-motion";
 
 const heroHighlights = [
   {
-    heading: "Community Classrooms",
+    heading: "Descipleship training",
     body: "Biblical worldview and literacy sessions facilitated by DTS alumni and volunteer teachers.",
     tag: "Education Focus",
   },
   {
     heading: "Prayer Circles",
-    body: "Sunrise intercession beside the Kagoro hills, inviting God’s heart for Kaduna State.",
+    body: "Morning intercession beside, inviting God’s heart for Kaduna State.",
     tag: "Prayer + Worship",
   },
   {
     heading: "Outreach Route",
-    body: "Weekly teams serving schools, markets, and IDP camps across Southern Kaduna.",
+    body: "Teams serving schools, markets, and IDP camps across Southern Kaduna.",
     tag: "Community Service",
   },
 ];
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative isolate min-h-screen bg-gradient-to-b from-secondary-900 via-secondary-900/95 to-secondary-800 text-white">
+    <section className="relative isolate min-h-screen bg-linear-to-b from-secondary-900 via-secondary-900/95 to-secondary-800 text-white">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <video
           className="h-full w-full object-cover"
@@ -59,7 +59,7 @@ const HeroSection: React.FC = () => {
           </h1>
           <p className="mt-6 text-xl text-slate-100 sm:text-xl">
             Raising passionate followers of Jesus and equipping young people to impact
-            communities, cultures, and nations — starting from Kafanchan.
+            communities, cultures, and nations. Starting from Kafanchan.
           </p>
           <p className="mt-4 text-base font-semibold tracking-wide text-amber-100">
             Discipleship • Missions • Community Transformation
@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
         >
           <div className="absolute -left-6 top-4 hidden w-28 rounded-2xl border border-white/30 bg-white/15 p-3 text-white backdrop-blur lg:block lg:z-20">
             <p className="text-[10px] uppercase tracking-[0.3em] text-amber-200">Next DTS</p>
-            <p className="mt-1.5 text-xl font-semibold">Feb 2026</p>
+            <p className="mt-1.5 text-xl font-semibold">Jan 10th 2026</p>
           </div>
 
           <div className="relative rounded-[34px] border border-white/20 bg-white/10 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.4)] backdrop-blur">

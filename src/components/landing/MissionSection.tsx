@@ -4,27 +4,27 @@ import { motion } from "framer-motion";
 const items = [
   {
     title: "Discipleship",
-    body: "Forming Christ-centered lifestyles through DTS, prayer circles, and intentional mentoring.",
+    body: "Forming Christ centered lifestyles through DTS, prayer circles, and intentional mentoring.",
     accent: "text-emerald-200",
   },
   {
     title: "Missions",
-    body: "Sending teams into schools, markets, and unreached villages across Southern Kaduna and beyond.",
+    body: "Sending teams into schools, communities and unreached places across Nigeria and beyond.",
     accent: "text-amber-200",
   },
   {
     title: "Community Transformation",
-    body: "Community classrooms, literacy pods, and mercy outreach for families and IDP communities.",
+    body: "Literacy pods, OMT and mercy outreach for families and IDP communities.",
     accent: "text-sky-200",
   },
 ];
 
 const MissionSection: React.FC = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary-900 via-secondary-900/90 to-secondary-800 text-white">
+    <section className="relative isolate overflow-hidden bg-linear-to-b from-secondary-900 via-secondary-900/90 to-secondary-800 text-white">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,197,94,0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
+        <div className="absolute inset-0 bg-linear-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-20 sm:px-10 lg:px-12 lg:py-28">
@@ -36,8 +36,7 @@ const MissionSection: React.FC = () => {
             Knowing God and making Him known through prayer, training, and outreach.
           </h2>
           <p className="mt-4 text-base text-slate-100 sm:text-lg">
-            We disciple young people to love Jesus deeply and serve communities across Kaduna
-            State with courage, humility, and practical compassion.
+            We disciple young people to love Jesus deeply and serve communities with courage, humility, and practical compassion.
           </p>
         </div>
 

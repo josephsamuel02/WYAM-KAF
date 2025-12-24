@@ -5,6 +5,7 @@ import Landing from "./pages/landing";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import StaffTeam from "./pages/staff-team";
+import KingsKidsPage from "./pages/kings-kids";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path={routes.about_page} element={<About />} />
             <Route path={routes.contact_page} element={<Contact />} />
             <Route path={routes.staff_page} element={<StaffTeam />} />
+            <Route path={routes.kings_kids_page} element={<KingsKidsPage />} />
           </Routes>
         </main>
       </div>

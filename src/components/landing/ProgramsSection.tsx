@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 const programs = [
   {
     title: "Discipleship Training School (DTS)",
-    detail: "5-month encounter with God: lecture phase + outreach across Kaduna State.",
+    detail: "6 month encounter with God: lecture phase + outreach across Kaduna State.",
     badge: "Next DTS",
-    meta: "Feb 2026 • Kafanchan Base",
+    meta: "Jan 10th 2026 • Kafanchan Base",
   },
   {
     title: "Frontier Missions School (FMS)",
@@ -15,8 +15,8 @@ const programs = [
     meta: "Rolling cohorts • Apply to join",
   },
   {
-    title: "Community Classrooms",
-    detail: "Literacy, Bible engagement, and mentorship hubs hosted in local communities.",
+    title: "Community Work",
+    detail: "Literacy, Bible engagement, OMT and mentorship  hosted in local community.",
     badge: "Ongoing",
     meta: "Weekly • Southern Kaduna",
   },
@@ -24,10 +24,10 @@ const programs = [
 
 const ProgramsSection: React.FC = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary-800 via-secondary-850 to-secondary-900 text-white">
+    <section className="relative isolate overflow-hidden bg-linear-to-b from-secondary-800 via-secondary-850 to-secondary-900 text-white">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(88,185,255,0.18),transparent_50%)]" />
-        <div className="absolute inset-0 bg-gradient-to-l from-secondary-900/85 via-secondary-900/70 to-secondary-800/70" />
+        <div className="absolute inset-0 bg-linear-to-l from-secondary-900/85 via-secondary-900/70 to-secondary-800/70" />
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-20 sm:px-10 lg:px-12 lg:py-28">

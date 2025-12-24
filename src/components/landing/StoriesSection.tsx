@@ -21,10 +21,10 @@ const stories = [
 
 const StoriesSection: React.FC = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary-900 via-secondary-900/95 to-secondary-900 text-white">
+    <section className="relative isolate overflow-hidden bg-linear-to-b from-secondary-900 via-secondary-900/95 to-secondary-900 text-white">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.08),transparent_45%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
+        <div className="absolute inset-0 bg-linear-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-20 sm:px-10 lg:px-12 lg:py-28">
@@ -33,7 +33,7 @@ const StoriesSection: React.FC = () => {
             Stories from the Field
           </p>
           <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
-            Jesus is moving across Kaduna—through youth, prayer, and simple obedience.
+            Jesus is moving across Kaduna through youth, prayer, and simple obedience.
           </h2>
           <p className="mt-3 text-base text-slate-100 sm:text-lg">
             Here’s a glimpse of what God is doing through outreach teams, prayer circles, and community classrooms.

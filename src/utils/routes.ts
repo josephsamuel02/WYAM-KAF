@@ -5,4 +5,5 @@ export const routes = {
     contact_page: '/contact',
     staff_page: '/staff-team',
     services_page: '/services',
+    kings_kids_page: '/kings-kids',
 };

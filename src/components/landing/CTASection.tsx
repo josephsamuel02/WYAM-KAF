@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const CTASection: React.FC = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary-900 via-secondary-900/90 to-secondary-800 text-white">
+    <section className="relative isolate overflow-hidden bg-linear-to-b from-secondary-900 via-secondary-900/90 to-secondary-800 text-white">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,197,94,0.18),transparent_55%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/90 via-secondary-900/75 to-secondary-800/70" />
+        <div className="absolute inset-0 bg-linear-to-r from-secondary-900/90 via-secondary-900/75 to-secondary-800/70" />
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-20 sm:px-10 lg:px-12 lg:py-28">
@@ -23,7 +23,7 @@ const CTASection: React.FC = () => {
                 Ready to move?
               </p>
               <h3 className="text-2xl font-semibold leading-tight sm:text-3xl lg:text-2xl">
-                Join the mission from Kafanchan—pray, serve, send, or come for DTS.
+                Join the mission from Kafanchan pray, serve, send, or come for DTS.
               </h3>
               <p className="mt-2 text-sm text-slate-100 sm:text-base lg:text-sm">
                 We’ll help you plug into prayer circles, outreach teams, or an upcoming school so you can live
