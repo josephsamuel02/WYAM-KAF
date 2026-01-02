@@ -10,7 +10,8 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem('darkMode');
-    return saved ? JSON.parse(saved) : false;
+    // Default to dark mode if no preference is saved
+    return saved !== null ? JSON.parse(saved) : true;
   });
 
   useEffect(() => {
