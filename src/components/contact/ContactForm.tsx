@@ -13,16 +13,16 @@ const ContactForm: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [_, setErrorMessage] = useState("");
 
   // Fallback to mailto when EmailJS is not configured or fails
   const openMailtoFallback = () => {
     const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone || "Not provided"}\n\n` +
-      `Message:\n${formData.message}`
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone || "Not provided"}\n\n` +
+        `Message:\n${formData.message}`
     );
     window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
   };
@@ -34,10 +34,8 @@ const ContactForm: React.FC = () => {
     setErrorMessage("");
 
     // Check if EmailJS is configured
-    const isEmailJSConfigured = 
-      EMAILJS_CONFIG.SERVICE_ID && 
-      EMAILJS_CONFIG.TEMPLATE_ID && 
-      EMAILJS_CONFIG.PUBLIC_KEY;
+    const isEmailJSConfigured =
+      EMAILJS_CONFIG.SERVICE_ID && EMAILJS_CONFIG.TEMPLATE_ID && EMAILJS_CONFIG.PUBLIC_KEY;
 
     if (!isEmailJSConfigured) {
       // Fallback to mailto if EmailJS is not configured
@@ -74,7 +72,9 @@ const ContactForm: React.FC = () => {
       } else {
         // EmailJS failed, use mailto fallback
         setSubmitStatus("error");
-        setErrorMessage(result.error || "Failed to send message. Use the link below to send via email.");
+        setErrorMessage(
+          result.error || "Failed to send message. Use the link below to send via email."
+        );
       }
     } catch (error) {
       setSubmitStatus("error");
@@ -260,7 +260,8 @@ const ContactForm: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="mt-4 rounded-xl bg-emerald-500/20 border border-emerald-400/30 p-4 text-sm text-emerald-200"
                   >
-                    ✓ Your message is ready! Please send it from your email app. We'll get back to you soon.
+                    ✓ Your message is ready! Please send it from your email app. We'll get back
+                    to you soon.
                   </motion.div>
                 )}
 
