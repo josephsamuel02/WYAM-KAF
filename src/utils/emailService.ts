@@ -61,8 +61,34 @@ export const sendEmail = async (
     } else {
       return { success: false, error: "Failed to send email" };
     }
-  } catch (error) {
+  } catch (error: any) {
     console.error("Email sending error:", error);
+
+    // Handle specific EmailJS errors
+    if (error?.status === 412) {
+      return {
+        success: false,
+        error:
+          "Gmail authentication error. Please reconnect your Gmail service in EmailJS dashboard.",
+      };
+    }
+
+    if (error?.text) {
+      // Extract user-friendly error message
+      const errorText = error.text;
+      if (errorText.includes("insufficient authentication scopes")) {
+        return {
+          success: false,
+          error:
+            "Gmail service needs re-authentication. Please reconnect it in EmailJS dashboard.",
+        };
+      }
+      return {
+        success: false,
+        error: errorText,
+      };
+    }
+
     return {
       success: false,
       error: error instanceof Error ? error.message : "An unexpected error occurred",

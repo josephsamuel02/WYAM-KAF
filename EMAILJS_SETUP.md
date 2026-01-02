@@ -52,7 +52,7 @@ Reply to: {{reply_to}}
 - From Email: `{{from_email}}`
 - Reply To: `{{reply_to}}`
 
-4. Copy the **Template ID** (e.g., `template_xxxxx`)  template_uimih0e
+4. Copy the **Template ID** (e.g., `template_xxxxx`) template_uimih0e
 
 ### 4. Get Your Public Key
 
@@ -86,9 +86,42 @@ npm run dev
 
 ## Troubleshooting
 
+### Common Issues
+
 - **"EmailJS configuration is missing"**: Make sure your `.env` file exists and contains all three variables
+
 - **"Failed to send email"**: Check that your EmailJS service is properly connected and your template is set up correctly
-- **Emails not received**: Check your spam folder and verify the "To Email" in your template matches your email address
+
+- **"Gmail_API: Request had insufficient authentication scopes" (Error 412)**:
+  This means your Gmail service needs to be re-authenticated. Follow these steps:
+
+  1. Go to your EmailJS dashboard → **Email Services**
+  2. Find your Gmail service and click on it
+  3. Click **"Reconnect"** or **"Update"**
+  4. Grant all requested permissions (make sure to allow all scopes)
+  5. Complete the OAuth flow
+  6. Test the form again
+
+- **"Gmail authentication error"**:
+
+  - Reconnect your Gmail service in EmailJS dashboard
+  - Make sure you're using a Gmail account (not Google Workspace)
+  - Try disconnecting and reconnecting the service
+  - Alternative: Use Outlook or another email service instead
+
+- **Emails not received**:
+  - Check your spam folder
+  - Verify the "To Email" in your template matches your email address
+  - Check EmailJS dashboard for any service errors
+  - Verify your email service is active and connected
+
+### Alternative Email Services
+
+If Gmail continues to have issues, consider using:
+
+- **Outlook/Hotmail**: More reliable for EmailJS
+- **SendGrid**: Professional email service (requires setup)
+- **SMTP Service**: Any SMTP-compatible service
 
 ## Security Note
 

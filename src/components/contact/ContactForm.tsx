@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BsSend, BsPerson, BsEnvelope, BsTelephone, BsChatDots } from "react-icons/bs";
 import { contactEmail } from "../../utils/routes";
-import { sendEmail } from "../../utils/emailService";
+import { sendEmail, EMAILJS_CONFIG } from "../../utils/emailService";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -15,11 +15,41 @@ const ContactForm: React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Fallback to mailto when EmailJS is not configured or fails
+  const openMailtoFallback = () => {
+    const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone || "Not provided"}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("idle");
     setErrorMessage("");
+
+    // Check if EmailJS is configured
+    const isEmailJSConfigured = 
+      EMAILJS_CONFIG.SERVICE_ID && 
+      EMAILJS_CONFIG.TEMPLATE_ID && 
+      EMAILJS_CONFIG.PUBLIC_KEY;
+
+    if (!isEmailJSConfigured) {
+      // Fallback to mailto if EmailJS is not configured
+      openMailtoFallback();
+      setSubmitStatus("success");
+      setIsSubmitting(false);
+      setTimeout(() => {
+        setFormData({ name: "", email: "", phone: "", message: "" });
+        setSubmitStatus("idle");
+      }, 3000);
+      return;
+    }
 
     try {
       const result = await sendEmail({
@@ -42,8 +72,9 @@ const ContactForm: React.FC = () => {
           setSubmitStatus("idle");
         }, 3000);
       } else {
+        // EmailJS failed, use mailto fallback
         setSubmitStatus("error");
-        setErrorMessage(result.error || "Failed to send message. Please try again.");
+        setErrorMessage(result.error || "Failed to send message. Use the link below to send via email.");
       }
     } catch (error) {
       setSubmitStatus("error");
@@ -229,7 +260,7 @@ const ContactForm: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="mt-4 rounded-xl bg-emerald-500/20 border border-emerald-400/30 p-4 text-sm text-emerald-200"
                   >
-                    ✓ Your message has been sent successfully! We'll get back to you soon.
+                    ✓ Your message is ready! Please send it from your email app. We'll get back to you soon.
                   </motion.div>
                 )}
 
@@ -237,24 +268,22 @@ const ContactForm: React.FC = () => {
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="mt-4 rounded-xl bg-red-500/20 border border-red-400/30 p-4 text-sm text-red-200"
+                    className="mt-4 rounded-xl bg-amber-500/20 border border-amber-400/30 p-4 text-sm text-amber-100"
                   >
-                    ✗{" "}
-                    {errorMessage ||
-                      "Failed to send message. Please try again or contact us directly."}
-                    <br />
-                    <a
-                      href={`mailto:${contactEmail}?subject=Contact Form&body=Name: ${encodeURIComponent(
-                        formData.name
-                      )}%0AEmail: ${encodeURIComponent(
-                        formData.email
-                      )}%0APhone: ${encodeURIComponent(
-                        formData.phone || "Not provided"
-                      )}%0A%0AMessage:%0A${encodeURIComponent(formData.message)}`}
-                      className="mt-2 inline-block text-xs underline hover:text-red-100"
+                    <p className="mb-3">
+                      Unable to send automatically. Click below to send via your email app:
+                    </p>
+                    <button
+                      type="button"
+                      onClick={openMailtoFallback}
+                      className="w-full rounded-xl bg-amber-500 px-4 py-3 text-sm font-semibold text-white hover:bg-amber-400 transition-colors flex items-center justify-center gap-2"
                     >
-                      Or send via email client
-                    </a>
+                      <BsEnvelope className="h-4 w-4" />
+                      Open Email App
+                    </button>
+                    <p className="mt-2 text-xs text-amber-200/70 text-center">
+                      Your message will be pre-filled in your email client
+                    </p>
                   </motion.div>
                 )}
               </div>
