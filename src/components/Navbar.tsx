@@ -65,13 +65,13 @@ const Navbar: React.FC = () => {
             />
             <div>
               <p
-                className={`text-[10px] font-semibold uppercase tracking-[0.28em] ${isDarkMode ? "text-secondary-200" : "text-secondary-500"
-                  } sm:text-xs sm:tracking-[0.35em]`}
+                className={`text-[8px] font-semibold uppercase tracking-[0.2em] ${isDarkMode ? "text-secondary-200" : "text-secondary-500"
+                  } sm:text-[10px] sm:tracking-[0.28em] md:text-xs md:tracking-[0.35em]`}
               >
                 Frontier Missions
               </p>
               <p
-                className={`text-lg font-bold sm:text-xl md:text-2xl ${isDarkMode ? "text-white" : "text-secondary-900"
+                className={`text-sm font-bold sm:text-lg md:text-xl lg:text-2xl ${isDarkMode ? "text-white" : "text-secondary-900"
                   }`}
               >
                 <span>YWAM </span>

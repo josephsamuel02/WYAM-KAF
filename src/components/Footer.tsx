@@ -65,12 +65,12 @@ const Footer: React.FC = () => {
                                 className="h-12 w-12 object-contain"
                             />
                             <div>
-                                <p className={`text-xs font-semibold uppercase tracking-widest ${
+                                <p className={`text-[10px] sm:text-xs font-semibold uppercase tracking-widest ${
                                     isDarkMode ? "text-secondary-400" : "text-secondary-500"
                                 }`}>
                                     Frontier Missions
                                 </p>
-                                <p className={`text-xl font-bold ${
+                                <p className={`text-base sm:text-lg md:text-xl font-bold ${
                                     isDarkMode ? "text-white" : "text-secondary-900"
                                 }`}>
                                     <span>YWAM </span>
