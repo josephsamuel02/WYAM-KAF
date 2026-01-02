@@ -27,8 +27,8 @@ const CTASection: React.FC = () => {
                 Join the mission from Kafanchan pray, serve, send, or come for DTS.
               </h3>
               <p className="mt-2 text-sm text-slate-100 sm:text-base lg:text-sm">
-                We’ll help you plug into prayer circles, outreach teams, or an upcoming school
-                so you can live “Knowing God. Making Him Known.”
+                We’ll help you plug into prayer circles, outreach teams, or an upcoming school so you can live
+                “Knowing God. Making Him Known.”
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
@@ -55,3 +55,4 @@ const CTASection: React.FC = () => {
 };
 
 export default CTASection;
+
