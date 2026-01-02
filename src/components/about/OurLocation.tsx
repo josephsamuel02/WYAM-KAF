@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { contactEmail } from "../../utils/routes";
 
 const OurLocation: React.FC = () => {
   return (
@@ -72,7 +73,7 @@ const OurLocation: React.FC = () => {
               <p>
                 <span className="font-semibold text-white">Contact:</span>
                 <br />
-                Email: info@ywamkafanchan.org
+                Email: <a href={`mailto:${contactEmail}`} className="text-sky-300 hover:text-sky-200 transition-colors">{contactEmail}</a>
                 <br />
                 Phone: +234 (0) 800 000 0000
               </p>
@@ -89,6 +90,7 @@ const OurLocation: React.FC = () => {
 };
 
 export default OurLocation;
+
 
 
 

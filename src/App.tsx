@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { routes } from "./utils/routes";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Landing from "./pages/landing";
 import About from "./pages/about";
 import Contact from "./pages/contact";
@@ -23,6 +24,8 @@ function App() {
             <Route path={routes.kings_kids_page} element={<KingsKidsPage />} />
           </Routes>
         </main>
+
+        <Footer />
       </div>
     </Router>
   );

@@ -58,9 +58,11 @@ const Navbar: React.FC = () => {
       >
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
           <Link to={routes.Landing_page} className="flex items-center gap-3 sm:gap-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-linear-to-br from-primary-600 via-emerald-500 to-amber-500 text-xl font-bold text-white shadow-lg shadow-emerald-500/20 sm:h-12 sm:w-12 sm:text-2xl">
-              Y
-            </div>
+            <img 
+              src="/Logo.png" 
+              alt="YWAM Kafanchan Logo" 
+              className="h-10 w-10 object-contain sm:h-12 sm:w-12"
+            />
             <div>
               <p
                 className={`text-[10px] font-semibold uppercase tracking-[0.28em] ${isDarkMode ? "text-secondary-200" : "text-secondary-500"

@@ -7,3 +7,5 @@ export const routes = {
     services_page: '/services',
     kings_kids_page: '/kings-kids',
 };
+
+export const contactEmail = 'mrsamd02@gmail.com';

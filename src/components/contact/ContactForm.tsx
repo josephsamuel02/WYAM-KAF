@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BsSend, BsPerson, BsEnvelope, BsTelephone, BsChatDots } from "react-icons/bs";
+import { contactEmail } from "../../utils/routes";
+import { sendEmail } from "../../utils/emailService";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,11 +11,46 @@ const ContactForm: React.FC = () => {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setErrorMessage("");
+
+    try {
+      const result = await sendEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      });
+
+      if (result.success) {
+        setSubmitStatus("success");
+        // Reset form after showing success
+        setTimeout(() => {
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+          setSubmitStatus("idle");
+        }, 3000);
+      } else {
+        setSubmitStatus("error");
+        setErrorMessage(result.error || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+      setErrorMessage(error instanceof Error ? error.message : "An unexpected error occurred");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -61,7 +98,10 @@ const ContactForm: React.FC = () => {
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur">
               <div className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100">
+                  <label
+                    htmlFor="name"
+                    className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100"
+                  >
                     <BsPerson className="h-4 w-4 text-emerald-200" />
                     Full Name
                   </label>
@@ -78,7 +118,10 @@ const ContactForm: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100">
+                  <label
+                    htmlFor="email"
+                    className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100"
+                  >
                     <BsEnvelope className="h-4 w-4 text-emerald-200" />
                     Email Address
                   </label>
@@ -95,7 +138,10 @@ const ContactForm: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100">
+                  <label
+                    htmlFor="phone"
+                    className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100"
+                  >
                     <BsTelephone className="h-4 w-4 text-emerald-200" />
                     Phone Number (Optional)
                   </label>
@@ -111,7 +157,10 @@ const ContactForm: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100">
+                  <label
+                    htmlFor="message"
+                    className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100"
+                  >
                     <BsChatDots className="h-4 w-4 text-emerald-200" />
                     Message
                   </label>
@@ -129,13 +178,85 @@ const ContactForm: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-emerald-500 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(16,185,129,0.35)] transition hover:bg-emerald-400 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/50"
+                  disabled={isSubmitting}
+                  className={`w-full rounded-full px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(16,185,129,0.35)] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/50 ${
+                    submitStatus === "success"
+                      ? "bg-emerald-600"
+                      : submitStatus === "error"
+                      ? "bg-red-500"
+                      : "bg-emerald-500 hover:bg-emerald-400"
+                  } ${isSubmitting ? "opacity-75 cursor-not-allowed" : ""}`}
                 >
                   <span className="flex items-center justify-center gap-2">
-                    Send Message
-                    <BsSend className="h-4 w-4" />
+                    {isSubmitting ? (
+                      <>
+                        <svg
+                          className="animate-spin h-4 w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          ></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : submitStatus === "success" ? (
+                      <>✓ Message Sent!</>
+                    ) : (
+                      <>
+                        Send Message
+                        <BsSend className="h-4 w-4" />
+                      </>
+                    )}
                   </span>
                 </button>
+
+                {submitStatus === "success" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mt-4 rounded-xl bg-emerald-500/20 border border-emerald-400/30 p-4 text-sm text-emerald-200"
+                  >
+                    ✓ Your message has been sent successfully! We'll get back to you soon.
+                  </motion.div>
+                )}
+
+                {submitStatus === "error" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mt-4 rounded-xl bg-red-500/20 border border-red-400/30 p-4 text-sm text-red-200"
+                  >
+                    ✗{" "}
+                    {errorMessage ||
+                      "Failed to send message. Please try again or contact us directly."}
+                    <br />
+                    <a
+                      href={`mailto:${contactEmail}?subject=Contact Form&body=Name: ${encodeURIComponent(
+                        formData.name
+                      )}%0AEmail: ${encodeURIComponent(
+                        formData.email
+                      )}%0APhone: ${encodeURIComponent(
+                        formData.phone || "Not provided"
+                      )}%0A%0AMessage:%0A${encodeURIComponent(formData.message)}`}
+                      className="mt-2 inline-block text-xs underline hover:text-red-100"
+                    >
+                      Or send via email client
+                    </a>
+                  </motion.div>
+                )}
               </div>
             </div>
           </motion.form>
@@ -148,7 +269,9 @@ const ContactForm: React.FC = () => {
             className="space-y-6"
           >
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur">
-              <h3 className="mb-4 text-xl font-semibold text-emerald-200">Other Ways to Reach Us</h3>
+              <h3 className="mb-4 text-xl font-semibold text-emerald-200">
+                Other Ways to Reach Us
+              </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/20">
@@ -157,10 +280,10 @@ const ContactForm: React.FC = () => {
                   <div>
                     <p className="text-sm font-semibold text-white">Email</p>
                     <a
-                      href="mailto:info@ywamkafanchan.org"
+                      href={`mailto:${contactEmail}`}
                       className="text-sm text-slate-200 transition hover:text-emerald-200"
                     >
-                      info@ywamkafanchan.org
+                      {contactEmail}
                     </a>
                   </div>
                 </div>
@@ -209,7 +332,8 @@ const ContactForm: React.FC = () => {
                 Nigeria
               </p>
               <p className="mt-4 text-xs text-slate-300">
-                We welcome visitors and short-term teams. Please contact us in advance to arrange your visit.
+                We welcome visitors and short-term teams. Please contact us in advance to
+                arrange your visit.
               </p>
             </div>
           </motion.div>
@@ -220,6 +344,3 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
-
-
-

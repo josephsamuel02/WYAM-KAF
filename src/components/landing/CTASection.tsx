@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { contactEmail } from "../../utils/routes";
 
 const CTASection: React.FC = () => {
   return (
@@ -32,7 +33,7 @@ const CTASection: React.FC = () => {
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
               <a
-                href="mailto:info@ywamkafanchan.org"
+                href={`mailto:${contactEmail}`}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(16,185,129,0.35)] transition hover:-translate-y-0.5 hover:bg-emerald-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 lg:text-xs lg:px-5 lg:py-2.5"
               >
                 Email the Base

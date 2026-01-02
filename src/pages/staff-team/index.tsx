@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { contactEmail } from "../../utils/routes";
 
 const team = [
   {
@@ -133,7 +134,7 @@ const StaffTeam: React.FC = () => {
             </p>
           </div>
           <a
-            href="mailto:info@ywamkafanchan.org"
+            href={`mailto:${contactEmail}`}
             className="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           >
             Email the Base
