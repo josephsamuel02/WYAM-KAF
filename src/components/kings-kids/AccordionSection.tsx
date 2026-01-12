@@ -68,8 +68,8 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({ items, title, subti
                                 onClick={() => toggleItem(index)}
                                 className={`w-full text-left p-6 md:p-8 rounded-2xl transition-all duration-300 ${
                                     openIndex === index
-                                        ? "bg-gradient-to-r from-sky-500/20 to-emerald-500/20 border-2 border-sky-400/50 shadow-lg shadow-sky-500/10"
-                                        : "bg-secondary-800/50 border-2 border-secondary-700 hover:border-sky-500/30 hover:bg-secondary-800"
+                                        ? "bg-gradient-to-r from-red-500/10 via-white/5 to-blue-500/10 border-2 border-blue-400/50 shadow-lg shadow-blue-500/10"
+                                        : "bg-secondary-800/50 border-2 border-secondary-700 hover:border-blue-500/30 hover:bg-secondary-800"
                                 }`}
                             >
                                 <div className="flex items-center justify-between gap-4">
@@ -77,8 +77,8 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({ items, title, subti
                                         {item.icon && (
                                             <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
                                                 openIndex === index
-                                                    ? "bg-sky-500 text-white"
-                                                    : "bg-secondary-700 text-sky-400"
+                                                    ? "bg-blue-600 text-white"
+                                                    : "bg-secondary-700 text-blue-400"
                                             }`}>
                                                 {item.icon}
                                             </div>
@@ -94,7 +94,7 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({ items, title, subti
                                         transition={{ duration: 0.3 }}
                                         className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${
                                             openIndex === index
-                                                ? "bg-sky-500 text-white"
+                                                ? "bg-blue-600 text-white"
                                                 : "bg-secondary-700 text-slate-300"
                                         }`}
                                     >

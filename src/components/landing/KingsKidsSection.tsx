@@ -14,11 +14,11 @@ const images = [
         title: "Creative Outreach",
         description: "Equipping young people to serve and share God's love in their communities.",
     },
-    {
-        url: "/kings_kids_family_discipleship_1766602636629.png",
-        title: "Family Discipleship",
-        description: "Walking together as families and generations to follow Jesus.",
-    },
+    // {
+    //     url: "/kings_kids_family_discipleship_1766602636629.png",
+    //     title: "Family Discipleship",
+    //     description: "Walking together as families and generations to follow Jesus.",
+    // },
 ];
 
 const KingsKidsSection: React.FC = () => {
@@ -29,7 +29,7 @@ const KingsKidsSection: React.FC = () => {
             {/* Background Ornaments */}
             <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
                 <div
-                    className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-sky-400 to-emerald-400 opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                    className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-red-500 via-white to-blue-500 opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
                     style={{
                         clipPath:
                             "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -43,7 +43,7 @@ const KingsKidsSection: React.FC = () => {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mb-4 inline-flex items-center gap-2 rounded-full bg-sky-500/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-sky-400"
+                        className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-blue-400"
                     >
                         Family & Youth Ministry
                     </motion.p>
@@ -63,7 +63,7 @@ const KingsKidsSection: React.FC = () => {
                         transition={{ delay: 0.2 }}
                         className="mt-6 text-lg leading-8 text-slate-300"
                     >
-                        Leading children, teenagers, and families into a deeper knowledge of God, bringing Him joy, and making His Kingdom known to all peoples. We believe children are significant in the present for establishing God's kingdom.
+                        Leading children and teenagers into a deeper knowledge of God, bringing Him joy, and making His Kingdom known to all peoples. We believe children are significant in the present for establishing God's kingdom.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ const KingsKidsSection: React.FC = () => {
                     >
                         <Link
                             to={routes.kings_kids_page}
-                            className="rounded-full bg-sky-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:bg-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                            className="rounded-full bg-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
                         >
                             Explore King's Kids
                         </Link>
@@ -136,7 +136,7 @@ const KingsKidsSection: React.FC = () => {
                             <button
                                 key={idx}
                                 onClick={() => setActiveIdx(idx)}
-                                className={`h-2 w-2 rounded-full transition-all ${activeIdx === idx ? "w-6 bg-sky-500" : "bg-slate-600"
+                                className={`h-2 w-2 rounded-full transition-all ${activeIdx === idx ? "w-6 bg-blue-500" : "bg-slate-600"
                                     }`}
                             />
                         ))}

@@ -94,7 +94,7 @@ const ContactForm: React.FC = () => {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary-800 via-secondary-900/95 to-secondary-900 text-white">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.12),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.12),transparent_50%)]" />
         <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
       </div>
 
@@ -106,7 +106,7 @@ const ContactForm: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl"
         >
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-100">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-blue-200">
             Send us a Message
           </p>
           <h2 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
@@ -133,7 +133,7 @@ const ContactForm: React.FC = () => {
                     htmlFor="name"
                     className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100"
                   >
-                    <BsPerson className="h-4 w-4 text-emerald-200" />
+                    <BsPerson className="h-4 w-4 text-blue-300" />
                     Full Name
                   </label>
                   <input
@@ -143,7 +143,7 @@ const ContactForm: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="mt-2 w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-slate-400 transition focus:border-emerald-400/50 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-400/30"
+                    className="mt-2 w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-slate-400 transition focus:border-blue-400/50 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400/30"
                     placeholder="John Doe"
                   />
                 </div>
@@ -153,7 +153,7 @@ const ContactForm: React.FC = () => {
                     htmlFor="email"
                     className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100"
                   >
-                    <BsEnvelope className="h-4 w-4 text-emerald-200" />
+                    <BsEnvelope className="h-4 w-4 text-blue-300" />
                     Email Address
                   </label>
                   <input
@@ -163,7 +163,7 @@ const ContactForm: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="mt-2 w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-slate-400 transition focus:border-emerald-400/50 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-400/30"
+                    className="mt-2 w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-slate-400 transition focus:border-blue-400/50 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400/30"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -173,7 +173,7 @@ const ContactForm: React.FC = () => {
                     htmlFor="phone"
                     className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100"
                   >
-                    <BsTelephone className="h-4 w-4 text-emerald-200" />
+                    <BsTelephone className="h-4 w-4 text-blue-300" />
                     Phone Number (Optional)
                   </label>
                   <input
@@ -182,7 +182,7 @@ const ContactForm: React.FC = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="mt-2 w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-slate-400 transition focus:border-emerald-400/50 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-400/30"
+                    className="mt-2 w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-slate-400 transition focus:border-blue-400/50 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400/30"
                     placeholder="+234 800 000 0000"
                   />
                 </div>
@@ -192,7 +192,7 @@ const ContactForm: React.FC = () => {
                     htmlFor="message"
                     className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-100"
                   >
-                    <BsChatDots className="h-4 w-4 text-emerald-200" />
+                    <BsChatDots className="h-4 w-4 text-blue-300" />
                     Message
                   </label>
                   <textarea
@@ -202,7 +202,7 @@ const ContactForm: React.FC = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="mt-2 w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-slate-400 transition focus:border-emerald-400/50 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-400/30"
+                    className="mt-2 w-full rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-slate-400 transition focus:border-blue-400/50 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400/30"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
@@ -210,12 +210,12 @@ const ContactForm: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full rounded-full px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(16,185,129,0.35)] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/50 ${
+                  className={`w-full rounded-full px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.35)] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/50 ${
                     submitStatus === "success"
-                      ? "bg-emerald-600"
+                      ? "bg-green-600"
                       : submitStatus === "error"
                       ? "bg-red-500"
-                      : "bg-emerald-500 hover:bg-emerald-400"
+                      : "bg-blue-600 hover:bg-blue-500"
                   } ${isSubmitting ? "opacity-75 cursor-not-allowed" : ""}`}
                 >
                   <span className="flex items-center justify-center gap-2">
@@ -258,7 +258,7 @@ const ContactForm: React.FC = () => {
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="mt-4 rounded-xl bg-emerald-500/20 border border-emerald-400/30 p-4 text-sm text-emerald-200"
+                    className="mt-4 rounded-xl bg-green-500/20 border border-green-400/30 p-4 text-sm text-green-200"
                   >
                     ✓ Your message is ready! Please send it from your email app. We'll get back
                     to you soon.
@@ -269,7 +269,7 @@ const ContactForm: React.FC = () => {
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="mt-4 rounded-xl bg-amber-500/20 border border-amber-400/30 p-4 text-sm text-amber-100"
+                    className="mt-4 rounded-xl bg-red-500/20 border border-red-400/30 p-4 text-sm text-red-100"
                   >
                     <p className="mb-3">
                       Unable to send automatically. Click below to send via your email app:
@@ -277,12 +277,12 @@ const ContactForm: React.FC = () => {
                     <button
                       type="button"
                       onClick={openMailtoFallback}
-                      className="w-full rounded-xl bg-amber-500 px-4 py-3 text-sm font-semibold text-white hover:bg-amber-400 transition-colors flex items-center justify-center gap-2"
+                      className="w-full rounded-xl bg-red-500 px-4 py-3 text-sm font-semibold text-white hover:bg-red-400 transition-colors flex items-center justify-center gap-2"
                     >
                       <BsEnvelope className="h-4 w-4" />
                       Open Email App
                     </button>
-                    <p className="mt-2 text-xs text-amber-200/70 text-center">
+                    <p className="mt-2 text-xs text-red-200/70 text-center">
                       Your message will be pre-filled in your email client
                     </p>
                   </motion.div>
@@ -299,19 +299,19 @@ const ContactForm: React.FC = () => {
             className="space-y-6"
           >
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur">
-              <h3 className="mb-4 text-xl font-semibold text-emerald-200">
+              <h3 className="mb-4 text-xl font-semibold text-blue-300">
                 Other Ways to Reach Us
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/20">
-                    <BsEnvelope className="h-5 w-5 text-emerald-200" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-500/20">
+                    <BsEnvelope className="h-5 w-5 text-red-300" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-white">Email</p>
                     <a
                       href={`mailto:${contactEmail}`}
-                      className="text-sm text-slate-200 transition hover:text-emerald-200"
+                      className="text-sm text-slate-200 transition hover:text-red-300"
                     >
                       {contactEmail}
                     </a>
@@ -319,14 +319,14 @@ const ContactForm: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/20">
-                    <BsTelephone className="h-5 w-5 text-amber-200" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10">
+                    <BsTelephone className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-white">Phone</p>
                     <a
                       href="tel:+2348000000000"
-                      className="text-sm text-slate-200 transition hover:text-amber-200"
+                      className="text-sm text-slate-200 transition hover:text-white"
                     >
                       +234 (0) 800 000 0000
                     </a>
@@ -334,8 +334,8 @@ const ContactForm: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-500/20">
-                    <BsChatDots className="h-5 w-5 text-sky-200" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-500/20">
+                    <BsChatDots className="h-5 w-5 text-blue-300" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-white">WhatsApp</p>
@@ -343,7 +343,7 @@ const ContactForm: React.FC = () => {
                       href="https://wa.me/2348000000000"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-slate-200 transition hover:text-sky-200"
+                      className="text-sm text-slate-200 transition hover:text-blue-300"
                     >
                       Chat with us on WhatsApp
                     </a>
@@ -353,7 +353,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur">
-              <h3 className="mb-4 text-xl font-semibold text-amber-200">Visit Us</h3>
+              <h3 className="mb-4 text-xl font-semibold text-white">Visit Us</h3>
               <p className="text-sm leading-relaxed text-slate-200">
                 YWAM Kafanchan Base
                 <br />

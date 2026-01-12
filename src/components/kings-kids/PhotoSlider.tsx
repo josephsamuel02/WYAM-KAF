@@ -110,7 +110,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photos, autoPlayInterval = 50
                         onClick={() => goToSlide(index)}
                         className={`relative flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden transition-all duration-300 ${
                             currentIndex === index
-                                ? "ring-4 ring-sky-400 scale-110 shadow-lg shadow-sky-400/50"
+                                ? "ring-4 ring-blue-400 scale-110 shadow-lg shadow-blue-400/50"
                                 : "opacity-60 hover:opacity-100 hover:scale-105"
                         }`}
                         aria-label={`Go to slide ${index + 1}`}
@@ -123,7 +123,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photos, autoPlayInterval = 50
                         {currentIndex === index && (
                             <motion.div
                                 layoutId="activeThumbnail"
-                                className="absolute inset-0 border-2 border-sky-400 rounded-xl"
+                                className="absolute inset-0 border-2 border-blue-400 rounded-xl"
                                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                             />
                         )}
@@ -139,7 +139,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photos, autoPlayInterval = 50
                         onClick={() => goToSlide(index)}
                         className={`h-1.5 rounded-full transition-all duration-300 ${
                             currentIndex === index
-                                ? "w-8 bg-sky-400"
+                                ? "w-8 bg-blue-400"
                                 : "w-1.5 bg-slate-600 hover:bg-slate-500"
                         }`}
                         aria-label={`Slide ${index + 1}`}

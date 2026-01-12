@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                                     isDarkMode ? "text-white" : "text-secondary-900"
                                 }`}>
                                     <span>YWAM </span>
-                                    <span className="bg-gradient-to-r from-primary-400 via-emerald-400 to-amber-300 bg-clip-text text-transparent">
+                                    <span className="bg-gradient-to-r from-red-500 via-white to-blue-500 bg-clip-text text-transparent">
                                         Kafanchan
                                     </span>
                                 </p>

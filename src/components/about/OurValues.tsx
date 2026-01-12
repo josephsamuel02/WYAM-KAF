@@ -7,25 +7,25 @@ const values = [
     title: "Knowing God",
     description: "We prioritize intimacy with Jesus through prayer, worship, and studying His Word. Everything flows from our relationship with Him.",
     icon: BsHeart,
-    accent: "text-emerald-200",
+    accent: "text-red-300",
   },
   {
     title: "Making Him Known",
     description: "We are called to share the gospel with boldness and compassion, serving communities and reaching the unreached.",
     icon: BsGlobe,
-    accent: "text-amber-200",
+    accent: "text-white",
   },
   {
     title: "Discipleship",
     description: "We invest in young people, walking alongside them as they grow in faith, character, and calling.",
     icon: BsPeople,
-    accent: "text-sky-200",
+    accent: "text-blue-300",
   },
   {
     title: "Community Transformation",
     description: "We serve with practical compassion—education, mercy ministry, and community development—bringing God's kingdom to earth.",
     icon: BsHeartFill,
-    accent: "text-emerald-200",
+    accent: "text-red-300",
   },
 ];
 
@@ -33,7 +33,7 @@ const OurValues: React.FC = () => {
   return (
     <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary-900 via-secondary-900/95 to-secondary-800 text-white">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.15),transparent_50%)]" />
         <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
       </div>
 
@@ -45,7 +45,7 @@ const OurValues: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl"
         >
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-100">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-blue-200">
             Our Core Values
           </p>
           <h2 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">

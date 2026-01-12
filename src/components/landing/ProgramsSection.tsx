@@ -53,7 +53,7 @@ const ProgramsSection: React.FC = () => {
               className="relative flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/5 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur"
             >
               <div className="flex items-center justify-between">
-                <p className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-emerald-100">
+                <p className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-blue-200">
                   {program.badge}
                 </p>
                 <p className="text-[11px] text-slate-200">{program.meta}</p>

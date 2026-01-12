@@ -112,8 +112,8 @@ const KingsKidsPage: React.FC = () => {
           </div>
 
           {/* Gradient Overlays */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(88,185,255,0.25),transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.2),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.25),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(239,68,68,0.15),transparent_60%)]" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary-950/40 to-secondary-950/80" />
 
           {/* Pattern Overlay */}
@@ -133,7 +133,7 @@ const KingsKidsPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-20 left-10 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl"
+            className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -146,7 +146,7 @@ const KingsKidsPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute bottom-20 right-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"
+            className="absolute bottom-20 right-20 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"
           />
         </div>
 
@@ -158,11 +158,11 @@ const KingsKidsPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 px-5 py-2 text-xs font-bold uppercase tracking-widest text-sky-200 shadow-lg shadow-sky-500/20"
+              className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 px-5 py-2 text-xs font-bold uppercase tracking-widest text-blue-200 shadow-lg shadow-blue-500/20"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-400"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
               </span>
               Children & Youth Ministry
             </motion.div>
@@ -174,10 +174,10 @@ const KingsKidsPage: React.FC = () => {
               transition={{ delay: 0.1, duration: 0.8 }}
               className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl mb-6 leading-tight"
             >
-              <span className="block bg-gradient-to-r from-white via-sky-100 to-emerald-100 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-red-200 via-white to-blue-200 bg-clip-text text-transparent">
                 Leading the Next
               </span>
-              <span className="block mt-2 bg-gradient-to-r from-sky-300 via-white to-emerald-200 bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-red-300 via-white to-blue-300 bg-clip-text text-transparent">
                 Generation
               </span>
             </motion.h1>
@@ -191,7 +191,7 @@ const KingsKidsPage: React.FC = () => {
             >
               King's Kids is more than a program; it's a movement of children and youth who
               desire to <span className="font-semibold text-white">know God</span> and{" "}
-              <span className="font-semibold text-sky-300">make Him known</span> through their
+              <span className="font-semibold text-blue-300">make Him known</span> through their
               unique gifts and talents.
             </motion.p>
 
@@ -202,9 +202,9 @@ const KingsKidsPage: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="mt-12 flex items-center justify-center gap-4"
             >
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-sky-400 to-transparent" />
-              <div className="w-2 h-2 rounded-full bg-sky-400" />
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-emerald-400 to-transparent" />
+              <div className="h-px w-16 bg-gradient-to-r from-transparent via-red-400 to-transparent" />
+              <div className="w-2 h-2 rounded-full bg-white" />
+              <div className="h-px w-16 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
             </motion.div>
           </div>
 
@@ -214,17 +214,17 @@ const KingsKidsPage: React.FC = () => {
               {
                 icon: <IoMusicalNotes className="w-10 h-10" />,
                 text: "Worship & Celebration",
-                gradient: "from-sky-500/20 to-blue-500/20",
+                gradient: "from-red-500/20 to-red-600/20",
               },
               {
                 icon: <IoPeopleCircle className="w-10 h-10" />,
                 text: "Community Outreach",
-                gradient: "from-emerald-500/20 to-teal-500/20",
+                gradient: "from-white/10 to-slate-200/10",
               },
               {
                 icon: <IoHappy className="w-10 h-10" />,
                 text: "Kids Discipleship",
-                gradient: "from-purple-500/20 to-pink-500/20",
+                gradient: "from-blue-500/20 to-blue-600/20",
               },
             ].map((item, index) => (
               <motion.div
@@ -309,7 +309,7 @@ const KingsKidsPage: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-emerald-400 mb-6">
+              <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1 text-xs font-bold uppercase tracking-widest text-blue-400 mb-6">
                 Our Impact
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
@@ -323,8 +323,8 @@ const KingsKidsPage: React.FC = () => {
               </p>
               <div className="space-y-4">
                 <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-sky-500/20 flex items-center justify-center">
-                    <IoHeart className="w-6 h-6 text-sky-400" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center">
+                    <IoHeart className="w-6 h-6 text-red-400" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">
@@ -337,8 +337,8 @@ const KingsKidsPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center">
-                    <IoPeople className="w-6 h-6 text-emerald-400" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                    <IoPeople className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">
@@ -351,8 +351,8 @@ const KingsKidsPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                    <IoGlobe className="w-6 h-6 text-purple-400" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                    <IoGlobe className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">

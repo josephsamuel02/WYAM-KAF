@@ -9,7 +9,7 @@ const stories = [
   },
   {
     title: "Prayer on the hills",
-    body: "Sunrise intercession over Southern Kaduna—worship, repentance, and blessing spoken over villages.",
+    body: "Sunrise intercession over Southern Kaduna worship, repentance, and blessing spoken over villages.",
     tag: "Prayer",
   },
   {
@@ -29,7 +29,7 @@ const StoriesSection: React.FC = () => {
 
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-20 sm:px-10 lg:px-12 lg:py-28">
         <div className="max-w-3xl">
-          <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-100">
+          <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-blue-200">
             Stories from the Field
           </p>
           <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
@@ -50,7 +50,7 @@ const StoriesSection: React.FC = () => {
               transition={{ duration: 0.55, delay: idx * 0.05 }}
               className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur"
             >
-              <p className="text-[11px] uppercase tracking-[0.3em] text-emerald-200">{story.tag}</p>
+              <p className="text-[11px] uppercase tracking-[0.3em] text-blue-300">{story.tag}</p>
               <p className="mt-3 text-xl font-semibold text-white">{story.title}</p>
               <p className="text-sm text-slate-100 leading-relaxed">{story.body}</p>
             </motion.div>

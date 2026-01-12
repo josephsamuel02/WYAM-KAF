@@ -65,7 +65,7 @@ const StaffTeam: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl"
         >
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-100">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-blue-200">
             Staff Team • YWAM Kafanchan
           </p>
           <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
@@ -94,11 +94,11 @@ const StaffTeam: React.FC = () => {
             >
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.25em] text-emerald-200">{person.location}</p>
+                  <p className="text-xs uppercase tracking-[0.25em] text-blue-300">{person.location}</p>
                   <p className="mt-2 text-xl font-semibold text-white">{person.name}</p>
                 </div>
                 {person.avatarUrl ? (
-                  <div className="h-12 w-12 overflow-hidden rounded-2xl border border-white/15 shadow-lg shadow-emerald-500/20">
+                  <div className="h-12 w-12 overflow-hidden rounded-2xl border border-white/15 shadow-lg shadow-blue-500/20">
                     <img
                       src={person.avatarUrl}
                       alt={person.name}
@@ -107,12 +107,12 @@ const StaffTeam: React.FC = () => {
                     />
                   </div>
                 ) : (
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-500 via-emerald-500 to-amber-400 text-base font-bold text-white shadow-lg shadow-emerald-500/20">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-red-500 via-white to-blue-500 text-base font-bold text-secondary-900 shadow-lg shadow-blue-500/20">
                     {person.name.charAt(0)}
                   </div>
                 )}
               </div>
-              <p className="mt-3 text-sm font-semibold text-amber-100">{person.role}</p>
+              <p className="mt-3 text-sm font-semibold text-white">{person.role}</p>
               <p className="mt-2 text-sm text-slate-100 leading-relaxed">{person.focus}</p>
             </motion.div>
           ))}
@@ -124,7 +124,7 @@ const StaffTeam: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="flex flex-wrap items-center gap-4 rounded-3xl border border-white/15 bg-white/5 px-6 py-4 text-sm text-slate-100 backdrop-blur"
         >
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-500/90 text-white font-bold shadow-lg shadow-emerald-500/30">
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-white font-bold shadow-lg shadow-blue-500/30">
             ✉
           </div>
           <div className="flex-1 min-w-[240px]">

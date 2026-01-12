@@ -5,17 +5,17 @@ const items = [
   {
     title: "Discipleship",
     body: "Forming Christ centered lifestyles through DTS, prayer circles, and intentional mentoring.",
-    accent: "text-emerald-200",
+    accent: "text-red-300",
   },
   {
     title: "Missions",
     body: "Sending teams into schools, communities and unreached places across Nigeria and beyond.",
-    accent: "text-amber-200",
+    accent: "text-white",
   },
   {
     title: "Community Transformation",
     body: "Literacy pods, OMT and mercy outreach for families and IDP communities.",
-    accent: "text-sky-200",
+    accent: "text-blue-300",
   },
 ];
 
@@ -23,13 +23,13 @@ const MissionSection: React.FC = () => {
   return (
     <section className="relative isolate overflow-hidden bg-linear-to-b from-secondary-900 via-secondary-900/90 to-secondary-800 text-white">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,197,94,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.15),transparent_50%)]" />
         <div className="absolute inset-0 bg-linear-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-20 sm:px-10 lg:px-12 lg:py-28">
         <div className="max-w-3xl">
-          <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-amber-100">
+          <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-blue-200">
             Our Mission
           </p>
           <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">

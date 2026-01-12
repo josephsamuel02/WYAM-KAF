@@ -6,7 +6,7 @@ const CTASection: React.FC = () => {
   return (
     <section className="relative isolate overflow-hidden bg-linear-to-b from-secondary-900 via-secondary-900/90 to-secondary-800 text-white">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,197,94,0.18),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.18),transparent_55%)]" />
         <div className="absolute inset-0 bg-linear-to-r from-secondary-900/90 via-secondary-900/75 to-secondary-800/70" />
       </div>
 
@@ -20,7 +20,7 @@ const CTASection: React.FC = () => {
         >
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl lg:max-w-xl">
-              <p className="mb-2 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-amber-100 lg:px-3 lg:py-0.5">
+              <p className="mb-2 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-blue-200 lg:px-3 lg:py-0.5">
                 Ready to move?
               </p>
               <h3 className="text-2xl font-semibold leading-tight sm:text-3xl lg:text-2xl">
@@ -34,7 +34,7 @@ const CTASection: React.FC = () => {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
               <a
                 href={`mailto:${contactEmail}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(16,185,129,0.35)] transition hover:-translate-y-0.5 hover:bg-emerald-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 lg:text-xs lg:px-5 lg:py-2.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.35)] transition hover:-translate-y-0.5 hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 lg:text-xs lg:px-5 lg:py-2.5"
               >
                 Email the Base
                 <span className="text-base lg:text-sm">✉</span>

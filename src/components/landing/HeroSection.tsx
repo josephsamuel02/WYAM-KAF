@@ -9,7 +9,7 @@ const heroHighlights = [
   },
   {
     heading: "Prayer Circles",
-    body: "Morning intercession beside, inviting God’s heart for Kaduna State.",
+    body: "Morning intercession, inviting God’s heart for Kaduna State.",
     tag: "Prayer + Worship",
   },
   {
@@ -36,8 +36,8 @@ const HeroSection: React.FC = () => {
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/95 via-secondary-900/85 to-secondary-800/70" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(247,241,227,0.35),_transparent_60%)]" />
+        <div className="absolute inset-0 bg-linear-to-r from-secondary-900/95 via-secondary-900/85 to-secondary-800/70" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(247,241,227,0.35),transparent_60%)]" />
         <div className="pointer-events-none absolute inset-0 opacity-20 mix-blend-overlay">
           <div className="h-full w-full bg-[url('https://www.toptal.com/designers/subtlepatterns/uploads/pw_maze_white.png')]" />
         </div>
@@ -51,22 +51,22 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.9 }}
           className="max-w-2xl"
         >
-          <span className="mb-5 inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-white/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-amber-100 sm:px-4 sm:tracking-[0.35em]">
+          <span className="mb-5 inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-white/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-blue-200 sm:px-4 sm:tracking-[0.35em]">
             Kaduna State • Youth With A Mission
           </span>
           <h1 className="text-5xl font-semibold leading-tight sm:text-5xl md:text-6xl lg:text-6xl">
-            Knowing God. Making Him Known.
+            Know God.<br /> Make Him Known.
           </h1>
           <p className="mt-6 text-xl text-slate-100 sm:text-xl">
             Raising passionate followers of Jesus and equipping young people to impact
-            communities, cultures, and nations. Starting from Kafanchan.
+            communities, cultures, and nations. Starting from our Jerusalem (Kafanchan).
           </p>
-          <p className="mt-4 text-base font-semibold tracking-wide text-amber-100">
+          <p className="mt-4 text-base font-semibold tracking-wide text-blue-200">
             Discipleship • Missions • Community Transformation
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <button className="rounded-full bg-emerald-500/90 px-7 py-2.5 text-sm font-semibold tracking-wide text-white transition hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-900 focus-visible:ring-white/70">
+            <button className="rounded-full bg-blue-600 px-7 py-2.5 text-sm font-semibold tracking-wide text-white transition hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-900 focus-visible:ring-white/70">
               Join the Mission
             </button>
             <button className="rounded-full border border-white/30 bg-white/5 px-7 py-2.5 text-sm font-semibold tracking-wide text-white transition hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
@@ -83,7 +83,7 @@ const HeroSection: React.FC = () => {
           className="relative w-full max-w-md self-stretch mt-6 lg:mt-10"
         >
           <div className="absolute -left-6 top-4 hidden w-28 rounded-2xl border border-white/30 bg-white/15 p-3 text-white backdrop-blur lg:block lg:z-20">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-amber-200">Next DTS</p>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-blue-200">Next DTS</p>
             <p className="mt-1.5 text-xl font-semibold">Jan 10th 2026</p>
           </div>
 
@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
                   key={highlight.heading}
                   className="rounded-2xl border border-white/15 bg-secondary-900/40 p-3.5"
                 >
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-emerald-200">
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-blue-300">
                     {highlight.tag}
                   </p>
                   <p className="mt-1.5 text-base font-semibold">{highlight.heading}</p>
@@ -114,7 +114,7 @@ const HeroSection: React.FC = () => {
           </div>
 
           <div className="absolute -bottom-6 right-0 hidden rounded-2xl border border-white/30 bg-white/15 px-5 py-4 text-white backdrop-blur md:flex md:flex-col md:items-start md:z-20">
-            <p className="text-xs font-semibold text-emerald-200">Weekly Outreach</p>
+            <p className="text-xs font-semibold text-blue-300">Weekly Outreach</p>
             <p className="text-[10px] text-slate-100">Schools • Markets • IDP Camps</p>
           </div>
         </motion.div>
