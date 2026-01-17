@@ -94,15 +94,27 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Mesh gradient uses dynamic colors from logo - updated via JavaScript */
+:root {
+  --mesh-accent-r: 239;
+  --mesh-accent-g: 68;
+  --mesh-accent-b: 68;
+  --mesh-primary-r: 59;
+  --mesh-primary-g: 130;
+  --mesh-primary-b: 246;
+  --gradient-green: #22c55e;
+  --gradient-yellow: #facc15; /* Softer yellow to reduce sharpness */
+}
+
 .mesh-gradient {
-  background-image: radial-gradient(at 10% 20%, rgba(239, 68, 68, 0.08) 0%, transparent 55%),
-    radial-gradient(at 80% 10%, rgba(59, 130, 246, 0.12) 0%, transparent 45%),
+  background-image: radial-gradient(at 10% 20%, rgba(var(--mesh-accent-r), var(--mesh-accent-g), var(--mesh-accent-b), 0.08) 0%, transparent 55%),
+    radial-gradient(at 80% 10%, rgba(var(--mesh-primary-r), var(--mesh-primary-g), var(--mesh-primary-b), 0.12) 0%, transparent 45%),
     radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
 }
 
 :root.dark .mesh-gradient {
-  background-image: radial-gradient(at 20% 10%, rgba(239, 68, 68, 0.15) 0%, transparent 50%),
-    radial-gradient(at 90% 0%, rgba(59, 130, 246, 0.2) 0%, transparent 55%);
+  background-image: radial-gradient(at 20% 10%, rgba(var(--mesh-accent-r), var(--mesh-accent-g), var(--mesh-accent-b), 0.15) 0%, transparent 50%),
+    radial-gradient(at 90% 0%, rgba(var(--mesh-primary-r), var(--mesh-primary-g), var(--mesh-primary-b), 0.2) 0%, transparent 55%);
 }
 
 @keyframes float {

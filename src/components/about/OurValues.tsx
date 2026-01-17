@@ -5,25 +5,29 @@ import { BsHeart, BsGlobe, BsPeople, BsHeartFill } from "react-icons/bs";
 const values = [
   {
     title: "Knowing God",
-    description: "We prioritize intimacy with Jesus through prayer, worship, and studying His Word. Everything flows from our relationship with Him.",
+    description:
+      "We prioritize intimacy with Jesus through prayer, worship, and studying His Word. Everything flows from our relationship with Him.",
     icon: BsHeart,
     accent: "text-red-300",
   },
   {
     title: "Making Him Known",
-    description: "We are called to share the gospel with boldness and compassion, serving communities and reaching the unreached.",
+    description:
+      "We are called to share the gospel with boldness and compassion, serving communities and reaching the unreached.",
     icon: BsGlobe,
     accent: "text-white",
   },
   {
     title: "Discipleship",
-    description: "We invest in young people, walking alongside them as they grow in faith, character, and calling.",
+    description:
+      "We invest in young people, walking alongside them as they grow in faith, character, and calling.",
     icon: BsPeople,
     accent: "text-blue-300",
   },
   {
     title: "Community Transformation",
-    description: "We serve with practical compassion—education, mercy ministry, and community development—bringing God's kingdom to earth.",
+    description:
+      "We serve with practical compassion education, mercy ministry, and community development, bringing God's kingdom to earth.",
     icon: BsHeartFill,
     accent: "text-red-300",
   },
@@ -31,10 +35,10 @@ const values = [
 
 const OurValues: React.FC = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary-900 via-secondary-900/95 to-secondary-800 text-white">
+    <section className="relative isolate overflow-hidden bg-linear-to-b from-secondary-900 via-secondary-900/95 to-secondary-800 text-white">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
+        <div className="absolute inset-0 bg-linear-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-16 sm:px-10 lg:px-12 lg:py-20">
@@ -66,11 +70,15 @@ const OurValues: React.FC = () => {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur"
             >
-              <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 ${value.accent}`}>
+              <div
+                className={`mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 ${value.accent}`}
+              >
                 <value.icon className="h-6 w-6" />
               </div>
               <h3 className={`text-lg font-semibold ${value.accent}`}>{value.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-100 sm:text-base">{value.description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-slate-100 sm:text-base">
+                {value.description}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -80,4 +88,3 @@ const OurValues: React.FC = () => {
 };
 
 export default OurValues;
-

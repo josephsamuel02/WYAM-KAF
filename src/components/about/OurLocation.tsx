@@ -4,10 +4,10 @@ import { contactEmail } from "../../utils/routes";
 
 const OurLocation: React.FC = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-b from-secondary-800 via-secondary-900/95 to-secondary-900 text-white">
+    <section className="relative isolate overflow-hidden bg-linear-to-b from-secondary-800 via-secondary-900/95 to-secondary-900 text-white">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_40%,rgba(59,130,246,0.12),transparent_50%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
+        <div className="absolute inset-0 bg-linear-to-r from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-16 sm:px-10 lg:px-12 lg:py-20">
@@ -35,19 +35,22 @@ const OurLocation: React.FC = () => {
             className="space-y-6"
           >
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur">
-              <h3 className="mb-3 text-xl font-semibold text-red-300">Kafanchan, Kaduna State</h3>
+              <h3 className="mb-3 text-xl font-semibold text-red-300">
+                Kafanchan, Kaduna State
+              </h3>
               <p className="text-base leading-relaxed text-slate-100">
-                Located in the heart of Southern Kaduna, Kafanchan serves as our base of operations. This strategic
-                location allows us to reach both urban and rural communities across the region.
+                Located in the heart of Southern Kaduna, Kafanchan serves as our base of
+                operations. This strategic location allows us to reach both urban and rural
+                communities across the region.
               </p>
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur">
               <h3 className="mb-3 text-xl font-semibold text-white">Our Reach</h3>
               <p className="text-base leading-relaxed text-slate-100">
-                From Kafanchan, we serve schools, markets, IDP camps, and villages across Southern Kaduna. Our teams
-                also go out to other states in Nigeria and beyond, carrying the mission of knowing God and making Him
-                known.
+                From Kafanchan, we serve schools, markets, IDP camps, and villages across
+                Southern Kaduna. Our teams also go out to other states in Nigeria and beyond,
+                carrying the mission of knowing God and making Him known.
               </p>
             </div>
           </motion.div>
@@ -64,22 +67,25 @@ const OurLocation: React.FC = () => {
               <p>
                 <span className="font-semibold text-white">Address:</span>
                 <br />
-                YWAM Kafanchan Base
-                <br />
-                Kafanchan, Kaduna State
-                <br />
-                Nigeria
+                No 4 Chawai Street Katsit - Kafanchan <br /> Kaduna State. Nigeria <br /> P. O.
+                Box 175
               </p>
               <p>
                 <span className="font-semibold text-white">Contact:</span>
                 <br />
-                Email: <a href={`mailto:${contactEmail}`} className="text-blue-300 hover:text-blue-200 transition-colors">{contactEmail}</a>
+                Email:{" "}
+                <a
+                  href={`mailto:${contactEmail}`}
+                  className="text-blue-300 hover:text-blue-200 transition-colors"
+                >
+                  {contactEmail}
+                </a>
                 <br />
-                Phone: +234 (0) 800 000 0000
+                Phone: +2349067357967, +2348155744455
               </p>
               <p className="pt-2 text-sm text-slate-200">
-                We welcome visitors, short-term teams, and those interested in joining our community. Contact us to
-                arrange a visit or learn more about our programs.
+                We welcome visitors, short-term teams, and those interested in joining our
+                community. Contact us to arrange a visit or learn more about our programs.
               </p>
             </div>
           </motion.div>
@@ -90,7 +96,3 @@ const OurLocation: React.FC = () => {
 };
 
 export default OurLocation;
-
-
-
-

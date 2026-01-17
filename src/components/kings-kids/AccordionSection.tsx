@@ -75,11 +75,20 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({ items, title, subti
                                 <div className="flex items-center justify-between gap-4">
                                     <div className="flex items-center gap-4 flex-1">
                                         {item.icon && (
-                                            <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                                                openIndex === index
-                                                    ? "bg-blue-600 text-white"
-                                                    : "bg-secondary-700 text-blue-400"
-                                            }`}>
+                                            <div 
+                                                className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
+                                                    openIndex === index
+                                                        ? "text-white"
+                                                        : "bg-secondary-700 text-blue-400"
+                                                }`}
+                                                style={
+                                                    openIndex === index
+                                                        ? {
+                                                            backgroundColor: "var(--gradient-green, rgb(3, 155, 59))",
+                                                          }
+                                                        : {}
+                                                }
+                                            >
                                                 {item.icon}
                                             </div>
                                         )}
@@ -94,9 +103,16 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({ items, title, subti
                                         transition={{ duration: 0.3 }}
                                         className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${
                                             openIndex === index
-                                                ? "bg-blue-600 text-white"
+                                                ? "text-white"
                                                 : "bg-secondary-700 text-slate-300"
                                         }`}
+                                        style={
+                                            openIndex === index
+                                                ? {
+                                                    backgroundColor: "var(--gradient-green, rgb(3, 155, 59))",
+                                                  }
+                                                : {}
+                                        }
                                     >
                                         <IoChevronDown className="w-5 h-5" />
                                     </motion.div>

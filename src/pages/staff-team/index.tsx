@@ -4,46 +4,22 @@ import { contactEmail } from "../../utils/routes";
 
 const team = [
   {
-    name: "Samuel Luka",
-    role: "Base Leader • DTS Director",
-    focus: "Discipleship, strategy, and intercession for Kaduna State.",
-    location: "Kafanchan, Kaduna",
-    avatarUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80",
+    name: "Gloria Kure",
+    role: "Base leader",
+    focus: "Leading the YWAM Kafanchan base with vision and dedication.",
+    avatarUrl: "/base_leader.png",
   },
   {
-    name: "Grace Yakubu",
-    role: "Outreach Coordinator",
-    focus: "Leads weekly school/market teams and IDP outreach logistics.",
-    location: "Kafanchan, Kaduna",
-    avatarUrl: "https://images.unsplash.com/photo-1524504542391-127872011665?auto=format&fit=crop&w=300&q=80",
+    name: "Lawrence Samuel",
+    role: "DTS School Leader",
+    focus: "Leading the Discipleship Training School program.",
+    avatarUrl: "/Lawrence.JPG",
   },
   {
-    name: "Emeka Udo",
-    role: "Training Lead • FMS",
-    focus: "Equips youth in frontier missions, evangelism, and Bible engagement.",
-    location: "Kaduna & Jos corridor",
-    avatarUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    name: "Maryam Danjuma",
-    role: "Prayer & Worship",
-    focus: "Hosts 24/7 prayer circles and worship nights across the base.",
-    location: "Kafanchan, Kaduna",
-    avatarUrl: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    name: "Joseph Oche",
-    role: "Community Development",
-    focus: "Coordinates literacy pods and community classroom initiatives.",
-    location: "Southern Kaduna",
-    avatarUrl: "https://images.unsplash.com/photo-1524504542391-127872011665?auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    name: "Ruth Ali",
-    role: "Hospitality & Member Care",
-    focus: "Welcomes visiting teams and cares for resident missionaries.",
-    location: "Kafanchan, Kaduna",
-    avatarUrl: "",
+    name: "Mr & Mrs Joseph",
+    role: "Admin & IT staff",
+    focus: "Managing administration and IT support for the base.",
+    avatarUrl: "/IMG_20260104_095547[1].JPG",
   },
 ];
 
@@ -81,7 +57,7 @@ const StaffTeam: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.1 }}
-          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
           {team.map((person, idx) => (
             <motion.div
@@ -90,30 +66,28 @@ const StaffTeam: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: idx * 0.05 }}
-              className="group rounded-3xl border border-white/10 bg-white/5 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur"
+              className="group flex flex-col rounded-3xl border border-white/10 bg-white/5 overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur hover:border-white/20 transition-all duration-300"
             >
-              <div className="flex items-center justify-between gap-3">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.25em] text-blue-300">{person.location}</p>
-                  <p className="mt-2 text-xl font-semibold text-white">{person.name}</p>
+              {person.avatarUrl ? (
+                <div className="relative h-64 w-full overflow-hidden">
+                  <img
+                    src={person.avatarUrl}
+                    alt={person.name}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/80 via-transparent to-transparent" />
                 </div>
-                {person.avatarUrl ? (
-                  <div className="h-12 w-12 overflow-hidden rounded-2xl border border-white/15 shadow-lg shadow-blue-500/20">
-                    <img
-                      src={person.avatarUrl}
-                      alt={person.name}
-                      className="h-full w-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                ) : (
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-red-500 via-white to-blue-500 text-base font-bold text-secondary-900 shadow-lg shadow-blue-500/20">
-                    {person.name.charAt(0)}
-                  </div>
-                )}
+              ) : (
+                <div className="flex h-64 w-full items-center justify-center bg-gradient-to-br from-red-500 via-white to-blue-500 text-6xl font-bold text-secondary-900">
+                  {person.name.charAt(0)}
+                </div>
+              )}
+              <div className="flex flex-col p-6">
+                <p className="text-2xl font-semibold text-white mb-1">{person.name}</p>
+                <p className="text-base font-semibold text-green-400 mb-3">{person.role}</p>
+                <p className="text-sm text-slate-200 leading-relaxed">{person.focus}</p>
               </div>
-              <p className="mt-3 text-sm font-semibold text-white">{person.role}</p>
-              <p className="mt-2 text-sm text-slate-100 leading-relaxed">{person.focus}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -124,7 +98,13 @@ const StaffTeam: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="flex flex-wrap items-center gap-4 rounded-3xl border border-white/15 bg-white/5 px-6 py-4 text-sm text-slate-100 backdrop-blur"
         >
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-white font-bold shadow-lg shadow-blue-500/30">
+          <div 
+            className="flex h-11 w-11 items-center justify-center rounded-2xl text-white font-bold shadow-lg"
+            style={{
+              backgroundColor: "var(--gradient-green, rgb(3, 155, 59))",
+              boxShadow: "0 10px 30px rgba(3, 155, 59, 0.35)",
+            }}
+          >
             ✉
           </div>
           <div className="flex-1 min-w-[240px]">

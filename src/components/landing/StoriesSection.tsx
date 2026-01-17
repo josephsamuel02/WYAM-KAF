@@ -1,23 +1,23 @@
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
-const stories = [
-  {
-    title: "Schools opened to the Gospel",
-    body: "Weekly teams share the Word, pray with students, and mentor emerging leaders in nearby towns.",
-    tag: "Outreach",
-  },
-  {
-    title: "Prayer on the hills",
-    body: "Sunrise intercession over Southern Kaduna worship, repentance, and blessing spoken over villages.",
-    tag: "Prayer",
-  },
-  {
-    title: "Mercy for displaced families",
-    body: "Food, blankets, and trauma-healing circles with IDP communities alongside local church partners.",
-    tag: "Compassion",
-  },
-];
+// const stories = [
+//   {
+//     title: "Schools opened to the Gospel",
+//     body: "Weekly teams share the Word, pray with students, and mentor emerging leaders in nearby towns.",
+//     tag: "Outreach",
+//   },
+//   {
+//     title: "Prayer on the hills",
+//     body: "Sunrise intercession over Southern Kaduna worship, repentance, and blessing spoken over villages.",
+//     tag: "Prayer",
+//   },
+//   {
+//     title: "Mercy for displaced families",
+//     body: "Food, blankets, and trauma-healing circles with IDP communities alongside local church partners.",
+//     tag: "Compassion",
+//   },
+// ];
 
 const StoriesSection: React.FC = () => {
   return (
@@ -35,12 +35,13 @@ const StoriesSection: React.FC = () => {
           <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
             Jesus is moving across Kaduna through youth, prayer, and simple obedience.
           </h2>
-          <p className="mt-3 text-base text-slate-100 sm:text-lg">
-            Here’s a glimpse of what God is doing through outreach teams, prayer circles, and community classrooms.
-          </p>
+          {/* <p className="mt-3 text-base text-slate-100 sm:text-lg">
+            Here’s a glimpse of what God is doing through outreach teams, prayer circles, and
+            community classrooms.
+          </p> */}
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        {/* <div className="grid gap-6 md:grid-cols-3">
           {stories.map((story, idx) => (
             <motion.div
               key={story.title}
@@ -55,11 +56,10 @@ const StoriesSection: React.FC = () => {
               <p className="text-sm text-slate-100 leading-relaxed">{story.body}</p>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
 };
 
 export default StoriesSection;
-

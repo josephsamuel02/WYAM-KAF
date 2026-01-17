@@ -55,7 +55,8 @@ const HeroSection: React.FC = () => {
             Kaduna State • Youth With A Mission
           </span>
           <h1 className="text-5xl font-semibold leading-tight sm:text-5xl md:text-6xl lg:text-6xl">
-            Know God.<br /> Make Him Known.
+            Know God.
+            <br /> Make Him Known.
           </h1>
           <p className="mt-6 text-xl text-slate-100 sm:text-xl">
             Raising passionate followers of Jesus and equipping young people to impact
@@ -66,7 +67,13 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <button className="rounded-full bg-blue-600 px-7 py-2.5 text-sm font-semibold tracking-wide text-white transition hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-900 focus-visible:ring-white/70">
+            <button
+              className="rounded-full px-7 py-2.5 text-sm font-semibold tracking-wide text-white transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-900 focus-visible:ring-white/70"
+              style={{
+                backgroundColor: "var(--gradient-green, rgb(3, 155, 59))",
+                boxShadow: "0 10px 30px rgba(3, 155, 59, 0.35)",
+              }}
+            >
               Join the Mission
             </button>
             <button className="rounded-full border border-white/30 bg-white/5 px-7 py-2.5 text-sm font-semibold tracking-wide text-white transition hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
@@ -84,7 +91,7 @@ const HeroSection: React.FC = () => {
         >
           <div className="absolute -left-6 top-4 hidden w-28 rounded-2xl border border-white/30 bg-white/15 p-3 text-white backdrop-blur lg:block lg:z-20">
             <p className="text-[10px] uppercase tracking-[0.3em] text-blue-200">Next DTS</p>
-            <p className="mt-1.5 text-xl font-semibold">Jan 10th 2026</p>
+            <p className="mt-1.5 text-xl font-semibold">Feb 3rd 2026</p>
           </div>
 
           <div className="relative rounded-[34px] border border-white/20 bg-white/10 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.4)] backdrop-blur">
@@ -113,10 +120,10 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="absolute -bottom-6 right-0 hidden rounded-2xl border border-white/30 bg-white/15 px-5 py-4 text-white backdrop-blur md:flex md:flex-col md:items-start md:z-20">
+          {/* <div className="absolute -bottom-6 right-0 hidden rounded-2xl border border-white/30 bg-white/15 px-5 py-4 text-white backdrop-blur md:flex md:flex-col md:items-start md:z-20">
             <p className="text-xs font-semibold text-blue-300">Weekly Outreach</p>
             <p className="text-[10px] text-slate-100">Schools • Markets • IDP Camps</p>
-          </div>
+          </div> */}
         </motion.div>
       </div>
 

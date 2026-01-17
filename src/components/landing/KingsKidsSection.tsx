@@ -74,7 +74,11 @@ const KingsKidsSection: React.FC = () => {
                     >
                         <Link
                             to={routes.kings_kids_page}
-                            className="rounded-full bg-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                            className="rounded-full px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500"
+                            style={{
+                              backgroundColor: "var(--gradient-green, rgb(3, 155, 59))",
+                              boxShadow: "0 10px 30px rgba(3, 155, 59, 0.35)",
+                            }}
                         >
                             Explore King's Kids
                         </Link>

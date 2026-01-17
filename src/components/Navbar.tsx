@@ -40,9 +40,12 @@ const Navbar: React.FC = () => {
         >
           {link.name}
           <span
-            className={`absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-gradient-to-r from-red-500 via-white to-blue-500 transition-transform duration-200 ${
+            className={`absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-gradient-to-r transition-transform duration-200 ${
               isActive ? "scale-x-100" : "group-hover:scale-x-100"
             }`}
+            style={{
+              backgroundImage: `linear-gradient(to right, var(--gradient-green, #22c55e) 0%, var(--gradient-green, #22c55e) 40%, var(--gradient-yellow, #facc15) 100%)`,
+            }}
           />
         </Link>
       );
@@ -78,8 +81,16 @@ const Navbar: React.FC = () => {
                   isDarkMode ? "text-white" : "text-secondary-900"
                 }`}
               >
-                <span className="bg-gradient-to-r from-red-500 via-white to-blue-500 bg-clip-text text-transparent">
-                  Kafanchan
+                <span className="relative inline-block">
+                  <span className="text-[var(--gradient-green,#22c55e)]">Kaf</span>
+                  <span
+                    className="bg-gradient-to-r bg-clip-text text-transparent inline-block"
+                    style={{
+                      backgroundImage: `linear-gradient(to right, var(--gradient-green,rgb(3, 155, 59)), var(--gradient-yellow, #be8335))`,
+                    }}
+                  >
+                    anchan
+                  </span>
                 </span>
               </p>
             </div>
@@ -92,7 +103,11 @@ const Navbar: React.FC = () => {
             <div className="flex items-center gap-4">
               <Link
                 to={routes.contact_page}
-                className="rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-500"
+                className="rounded-full px-5 py-2 text-sm font-semibold text-white shadow-lg transition hover:opacity-90"
+                style={{
+                  backgroundColor: "var(--gradient-green, rgb(3, 155, 59))",
+                  boxShadow: "0 10px 30px rgba(3, 155, 59, 0.35)",
+                }}
               >
                 Join the Mission
               </Link>
@@ -139,7 +154,11 @@ const Navbar: React.FC = () => {
               <div className="space-y-4 text-lg">{renderLinks("block")}</div>
               <Link
                 to={routes.contact_page}
-                className="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:opacity-90"
+                style={{
+                  backgroundColor: "var(--gradient-green, rgb(3, 155, 59))",
+                  boxShadow: "0 10px 30px rgba(3, 155, 59, 0.35)",
+                }}
               >
                 Join the Mission
               </Link>

@@ -74,23 +74,23 @@ const accordionItems = [
 
 const KingsKidsPage: React.FC = () => {
   return (
-    <div className="relative overflow-hidden bg-secondary-950">
+    <div
+      className=" w-full h-full relative overflow-hidden bg-contain bg-cente"
+      style={{
+        backgroundImage:
+          "url(https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1920&q=80)",
+      }}
+    >
+      <div className="absolute inset-0 bg-linear-to-b from-secondary-950/70 via-secondary-950/60 to-secondary-950/80" />
+
       {/* Hero / Header for the page */}
       <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Images Layer */}
         <div className="absolute inset-0 -z-10">
           {/* Primary Background Image */}
-          <div className="absolute inset-0">
-            <img
-              src="/kings_kids_worship_1766602589013.png"
-              alt="Kings Kids Worship"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-secondary-950/95 via-secondary-950/85 to-secondary-950/95" />
-          </div>
 
           {/* Secondary Background Image - Right Side */}
-          <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 opacity-10">
             <div className="absolute right-0 top-0 bottom-0 w-1/2 lg:w-2/5">
               <img
                 src="/kings_kids_outreach_1766602611673.png"
@@ -101,7 +101,7 @@ const KingsKidsPage: React.FC = () => {
           </div>
 
           {/* Tertiary Background Image - Left Side */}
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 opacity-5">
             <div className="absolute left-0 top-0 bottom-0 w-1/3 lg:w-1/4">
               <img
                 src="/kings_kids_family_discipleship_1766602636629.png"
@@ -112,9 +112,9 @@ const KingsKidsPage: React.FC = () => {
           </div>
 
           {/* Gradient Overlays */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.25),transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(239,68,68,0.15),transparent_60%)]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary-950/40 to-secondary-950/80" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(239,68,68,0.1),transparent_60%)]" />
+          <div className="absolute inset-0 bg-linear-to-b from-transparent via-secondary-950/20 to-secondary-950/60" />
 
           {/* Pattern Overlay */}
           <div className="pointer-events-none absolute inset-0 opacity-[0.03] mix-blend-overlay">
@@ -174,10 +174,10 @@ const KingsKidsPage: React.FC = () => {
               transition={{ delay: 0.1, duration: 0.8 }}
               className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl mb-6 leading-tight"
             >
-              <span className="block bg-gradient-to-r from-red-200 via-white to-blue-200 bg-clip-text text-transparent">
+              <span className="block bg-linear-to-r from-red-200 via-white to-blue-200 bg-clip-text text-transparent">
                 Leading the Next
               </span>
-              <span className="block mt-2 bg-gradient-to-r from-red-300 via-white to-blue-300 bg-clip-text text-transparent">
+              <span className="block mt-2 bg-linear-to-r from-red-300 via-white to-blue-300 bg-clip-text text-transparent">
                 Generation
               </span>
             </motion.h1>
@@ -202,9 +202,9 @@ const KingsKidsPage: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="mt-12 flex items-center justify-center gap-4"
             >
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-red-400 to-transparent" />
+              <div className="h-px w-16 bg-linear-to-r from-transparent via-red-400 to-transparent" />
               <div className="w-2 h-2 rounded-full bg-white" />
-              <div className="h-px w-16 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
+              <div className="h-px w-16 bg-linear-to-r from-transparent via-blue-400 to-transparent" />
             </motion.div>
           </div>
 
@@ -237,11 +237,11 @@ const KingsKidsPage: React.FC = () => {
               >
                 {/* Glass Effect Background */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${item.gradient} backdrop-blur-xl border border-white/20 shadow-2xl`}
+                  className={`absolute inset-0 bg-linear-to-br ${item.gradient} backdrop-blur-xl border border-white/20 shadow-2xl`}
                 />
 
                 {/* Glass Shine Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-linear-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Content */}
                 <div className="relative p-6">
@@ -285,7 +285,7 @@ const KingsKidsPage: React.FC = () => {
 
       {/* Photo Slider Section */}
       <section className="py-16 sm:py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary-950 via-secondary-900 to-secondary-950" />
+        <div className="absolute inset-0 bg-linear-to-b from-secondary-950 via-secondary-900 to-secondary-950" />
         <div className="relative">
           <PhotoSlider photos={photos} autoPlayInterval={6000} />
         </div>
@@ -300,7 +300,7 @@ const KingsKidsPage: React.FC = () => {
 
       {/* Vision & Impact Section */}
       <section className="py-24 sm:py-32 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary-950 via-secondary-900/50 to-secondary-950" />
+        <div className="absolute inset-0 bg-linear-to-b from-secondary-950 via-secondary-900/50 to-secondary-950" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
             <motion.div
@@ -323,7 +323,7 @@ const KingsKidsPage: React.FC = () => {
               </p>
               <div className="space-y-4">
                 <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center">
+                  <div className="shrink-0 w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center">
                     <IoHeart className="w-6 h-6 text-red-400" />
                   </div>
                   <div>
@@ -337,7 +337,7 @@ const KingsKidsPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                  <div className="shrink-0 w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
                     <IoPeople className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -351,7 +351,7 @@ const KingsKidsPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                  <div className="shrink-0 w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
                     <IoGlobe className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
@@ -379,7 +379,7 @@ const KingsKidsPage: React.FC = () => {
                   alt="Join the movement"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <h3 className="text-2xl font-bold text-white mb-2">Join the Movement</h3>
                   <p className="text-slate-200">

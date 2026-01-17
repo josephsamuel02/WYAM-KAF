@@ -34,7 +34,11 @@ const CTASection: React.FC = () => {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
               <a
                 href={`mailto:${contactEmail}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.35)] transition hover:-translate-y-0.5 hover:bg-blue-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 lg:text-xs lg:px-5 lg:py-2.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 lg:text-xs lg:px-5 lg:py-2.5"
+                style={{
+                  backgroundColor: "var(--gradient-green, rgb(3, 155, 59))",
+                  boxShadow: "0 10px 30px rgba(3, 155, 59, 0.35)",
+                }}
               >
                 Email the Base
                 <span className="text-base lg:text-sm">✉</span>

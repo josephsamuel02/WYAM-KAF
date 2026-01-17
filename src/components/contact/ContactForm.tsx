@@ -210,13 +210,21 @@ const ContactForm: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full rounded-full px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.35)] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/50 ${
+                  className={`w-full rounded-full px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400/50 ${
                     submitStatus === "success"
                       ? "bg-green-600"
                       : submitStatus === "error"
                       ? "bg-red-500"
-                      : "bg-blue-600 hover:bg-blue-500"
+                      : ""
                   } ${isSubmitting ? "opacity-75 cursor-not-allowed" : ""}`}
+                  style={
+                    submitStatus === "success" || submitStatus === "error"
+                      ? {}
+                      : {
+                          backgroundColor: "var(--gradient-green, rgb(3, 155, 59))",
+                          boxShadow: "0 10px 30px rgba(3, 155, 59, 0.35)",
+                        }
+                  }
                 >
                   <span className="flex items-center justify-center gap-2">
                     {isSubmitting ? (
@@ -325,10 +333,16 @@ const ContactForm: React.FC = () => {
                   <div>
                     <p className="text-sm font-semibold text-white">Phone</p>
                     <a
-                      href="tel:+2348000000000"
-                      className="text-sm text-slate-200 transition hover:text-white"
+                      href="tel:+2349067357967"
+                      className="text-sm text-slate-200 transition hover:text-white block"
                     >
-                      +234 (0) 800 000 0000
+                      +2349067357967
+                    </a>
+                    <a
+                      href="tel:+2348155744455"
+                      className="text-sm text-slate-200 transition hover:text-white block"
+                    >
+                      +2348155744455
                     </a>
                   </div>
                 </div>
@@ -340,12 +354,20 @@ const ContactForm: React.FC = () => {
                   <div>
                     <p className="text-sm font-semibold text-white">WhatsApp</p>
                     <a
-                      href="https://wa.me/2348000000000"
+                      href="https://wa.me/2349067357967"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-slate-200 transition hover:text-blue-300"
+                      className="text-sm text-slate-200 transition hover:text-blue-300 block"
                     >
-                      Chat with us on WhatsApp
+                      +2349067357967
+                    </a>
+                    <a
+                      href="https://wa.me/2348155744455"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-slate-200 transition hover:text-blue-300 block"
+                    >
+                      +2348155744455
                     </a>
                   </div>
                 </div>
@@ -355,11 +377,11 @@ const ContactForm: React.FC = () => {
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur">
               <h3 className="mb-4 text-xl font-semibold text-white">Visit Us</h3>
               <p className="text-sm leading-relaxed text-slate-200">
-                YWAM Kafanchan Base
+                No 4 Chawai Street Katsit - Kafanchan
                 <br />
-                Kafanchan, Kaduna State
+                Kaduna State, Nigeria
                 <br />
-                Nigeria
+                P. O. Box 175
               </p>
               <p className="mt-4 text-xs text-slate-300">
                 We welcome visitors and short-term teams. Please contact us in advance to
