@@ -16,19 +16,19 @@ const team = [
     avatarUrl: "/Lawrence.JPG",
   },
   {
-    name: "Mr & Mrs Joseph",
+    name: "Mr Joseph Samuel",
     role: "Admin & IT staff",
     focus: "Managing administration and IT support for the base.",
-    avatarUrl: "/IMG_20260104_095547[1].JPG",
+    avatarUrl: "/Samuel.jpeg",
   },
 ];
 
 const StaffTeam: React.FC = () => {
   return (
-    <section className="relative isolate min-h-screen overflow-hidden bg-gradient-to-b from-secondary-900 via-secondary-900/95 to-secondary-800 text-white">
+    <section className="relative isolate min-h-screen overflow-hidden bg-linear-to-b from-secondary-900 via-secondary-900/95 to-secondary-800 text-white">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(247,241,227,0.22),_transparent_55%)]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(247,241,227,0.22),transparent_55%)]" />
+        <div className="absolute inset-0 bg-linear-to-br from-secondary-900/90 via-secondary-900/80 to-secondary-800/70" />
         <div className="pointer-events-none absolute inset-0 opacity-15 mix-blend-overlay">
           <div className="h-full w-full bg-[url('https://www.toptal.com/designers/subtlepatterns/uploads/pw_maze_white.png')]" />
         </div>
@@ -48,8 +48,8 @@ const StaffTeam: React.FC = () => {
             Serving Kaduna with prayer, discipleship, and community outreach.
           </h1>
           <p className="mt-4 text-lg text-slate-100 sm:text-xl">
-            Meet the leaders and volunteers carrying the vision of “Knowing God. Making Him Known.” across schools,
-            markets, and communities in Northern Nigeria.
+            Meet the leaders and volunteers carrying the vision of “Knowing God. Making Him
+            Known.” across schools, markets, and communities in Northern Nigeria.
           </p>
         </motion.div>
 
@@ -76,10 +76,10 @@ const StaffTeam: React.FC = () => {
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-secondary-900/80 via-transparent to-transparent" />
                 </div>
               ) : (
-                <div className="flex h-64 w-full items-center justify-center bg-gradient-to-br from-red-500 via-white to-blue-500 text-6xl font-bold text-secondary-900">
+                <div className="flex h-64 w-full items-center justify-center bg-linear-to-br from-red-500 via-white to-blue-500 text-6xl font-bold text-secondary-900">
                   {person.name.charAt(0)}
                 </div>
               )}
@@ -98,7 +98,7 @@ const StaffTeam: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="flex flex-wrap items-center gap-4 rounded-3xl border border-white/15 bg-white/5 px-6 py-4 text-sm text-slate-100 backdrop-blur"
         >
-          <div 
+          <div
             className="flex h-11 w-11 items-center justify-center rounded-2xl text-white font-bold shadow-lg"
             style={{
               backgroundColor: "var(--gradient-green, rgb(3, 155, 59))",
@@ -107,10 +107,13 @@ const StaffTeam: React.FC = () => {
           >
             ✉
           </div>
-          <div className="flex-1 min-w-[240px]">
-            <p className="text-base font-semibold text-white">Join a team or send a visiting outreach</p>
+          <div className="flex-1 min-w-60">
+            <p className="text-base font-semibold text-white">
+              Join a team or send a visiting outreach
+            </p>
             <p className="text-sm text-slate-100">
-              Reach out to coordinate DTS placements, outreach trips, or prayer visits to Kaduna State.
+              Reach out to coordinate DTS placements, outreach trips, or prayer visits to
+              Kaduna State.
             </p>
           </div>
           <a

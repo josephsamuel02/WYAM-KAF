@@ -91,7 +91,7 @@ const HeroSection: React.FC = () => {
         >
           <div className="absolute -left-6 top-4 hidden w-28 rounded-2xl border border-white/30 bg-white/15 p-3 text-white backdrop-blur lg:block lg:z-20">
             <p className="text-[10px] uppercase tracking-[0.3em] text-blue-200">Next DTS</p>
-            <p className="mt-1.5 text-xl font-semibold">Feb 3rd 2026</p>
+            <p className="mt-1.5 text-xl font-semibold">Feb 22nd 2026</p>
           </div>
 
           <div className="relative rounded-[34px] border border-white/20 bg-white/10 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.4)] backdrop-blur">
